@@ -42,18 +42,92 @@
         .section {
             margin: 25px 0;
         }
-        .email-link {
+        .form-container {
+            background: #f8f9fa;
+            padding: 30px;
+            border-radius: 15px;
+            margin: 30px 0;
+            border: 2px solid #667eea;
+        }
+        .form-group {
+            margin-bottom: 20px;
+        }
+        label {
+            display: block;
+            color: #333;
+            font-weight: 600;
+            margin-bottom: 8px;
+            font-size: 1.1em;
+        }
+        input[type="email"],
+        input[type="text"],
+        textarea {
+            width: 100%;
+            padding: 12px 15px;
+            border: 2px solid #ddd;
+            border-radius: 8px;
+            font-size: 16px;
+            transition: border-color 0.3s;
+            font-family: inherit;
+        }
+        input[type="email"]:focus,
+        input[type="text"]:focus,
+        textarea:focus {
+            outline: none;
+            border-color: #667eea;
+        }
+        textarea {
+            resize: vertical;
+            min-height: 100px;
+        }
+        .submit-btn {
             background: #667eea;
             color: white;
-            padding: 12px 24px;
-            text-decoration: none;
+            padding: 15px 40px;
+            border: none;
             border-radius: 8px;
-            display: inline-block;
-            margin: 10px 0;
-            transition: background 0.3s;
+            font-size: 18px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s;
+            width: 100%;
         }
-        .email-link:hover {
+        .submit-btn:hover {
             background: #764ba2;
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(102, 126, 234, 0.4);
+        }
+        .submit-btn:active {
+            transform: translateY(0);
+        }
+        .submit-btn:disabled {
+            background: #ccc;
+            cursor: not-allowed;
+            transform: none;
+        }
+        .success-message {
+            display: none;
+            background: #d4edda;
+            color: #155724;
+            padding: 20px;
+            border-radius: 8px;
+            margin-top: 20px;
+            border: 2px solid #c3e6cb;
+        }
+        .success-message.show {
+            display: block;
+        }
+        .error-message {
+            display: none;
+            background: #f8d7da;
+            color: #721c24;
+            padding: 20px;
+            border-radius: 8px;
+            margin-top: 20px;
+            border: 2px solid #f5c6cb;
+        }
+        .error-message.show {
+            display: block;
         }
         ul, ol {
             margin-left: 20px;
@@ -81,10 +155,16 @@
             color: #999;
             font-size: 0.9em;
         }
+        .required {
+            color: #dc3545;
+        }
         @media (max-width: 600px) {
             .container {
                 padding: 20px;
                 margin: 20px auto;
+            }
+            .form-container {
+                padding: 20px;
             }
             h1 {
                 font-size: 1.5em;
@@ -101,29 +181,66 @@
         <p style="color: #999; margin-bottom: 30px;">Manage your data and privacy</p>
         
         <div class="section">
-            <h2>📋 How to Request Account Deletion</h2>
-            <p>To request deletion of your BetProf account and associated data, please follow these steps:</p>
+            <h2>🗑️ Request Account Deletion</h2>
+            <p>To permanently delete your BetProf account and all associated data, please fill out the form below. We take your privacy seriously and will process your request within 7 business days.</p>
             
-            <p><strong>Option 1: In-App (Recommended)</strong></p>
-            <ol>
-                <li>Open the <span class="app-name">BetProf</span> app</li>
-                <li>Go to <strong>Settings</strong> → <strong>Account</strong></li>
-                <li>Tap <strong>"Delete Account"</strong></li>
-                <li>Confirm your deletion request</li>
-            </ol>
-            
-            <p style="margin-top: 20px;"><strong>Option 2: Email Request</strong></p>
-            <p>Send an email to us with the following information:</p>
-            <a href="mailto:support@betprof.com?subject=Account%20Deletion%20Request" class="email-link">📧 support@betprof.com</a>
-            
-            <div class="highlight">
-                <strong>Include in your email:</strong>
-                <ul style="margin-left: 20px;">
-                    <li>Subject: "Account Deletion Request"</li>
-                    <li>Your registered email address</li>
-                    <li>Your username or phone number</li>
-                </ul>
+            <div class="form-container">
+                <form id="deletionForm">
+                    <div class="form-group">
+                        <label for="email">Email Address <span class="required">*</span></label>
+                        <input 
+                            type="email" 
+                            id="email" 
+                            name="email" 
+                            placeholder="Enter your registered email address"
+                            required
+                        >
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="username">Username or Phone Number (Optional)</label>
+                        <input 
+                            type="text" 
+                            id="username" 
+                            name="username" 
+                            placeholder="Enter your username or phone number"
+                        >
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="reason">Reason for Deletion (Optional)</label>
+                        <textarea 
+                            id="reason" 
+                            name="reason" 
+                            placeholder="Help us improve by telling us why you're leaving..."
+                        ></textarea>
+                    </div>
+                    
+                    <button type="submit" class="submit-btn" id="submitBtn">
+                        Submit Deletion Request
+                    </button>
+                </form>
+                
+                <div class="success-message" id="successMessage">
+                    <strong>✅ Request Submitted Successfully!</strong>
+                    <p>Your account deletion request has been received. You will receive a confirmation email within 7 business days once the deletion is complete.</p>
+                </div>
+                
+                <div class="error-message" id="errorMessage">
+                    <strong>❌ Submission Failed</strong>
+                    <p>There was an error submitting your request. Please try again or contact us directly at <a href="mailto:support@betprof.com">support@betprof.com</a></p>
+                </div>
             </div>
+        </div>
+
+        <div class="section">
+            <h2>📋 What Happens Next?</h2>
+            <ol>
+                <li>We receive your deletion request</li>
+                <li>We verify your account information</li>
+                <li>Your account and data are permanently deleted within 7 business days</li>
+                <li>You receive a confirmation email once completed</li>
+            </ol>
         </div>
 
         <div class="section">
@@ -152,17 +269,60 @@
             <p><strong>After 30 days</strong>, all retained data will be permanently deleted from our systems.</p>
         </div>
 
-        <div class="section">
-            <h2>⏱️ Processing Time</h2>
-            <p>Your deletion request will be processed within <strong>7 business days</strong>. You will receive a confirmation email at your registered email address once the deletion is complete.</p>
-            <p style="margin-top: 15px;"><em>Note: Once your account is deleted, this action cannot be undone. All your data will be permanently removed and cannot be recovered.</em></p>
+        <div class="highlight">
+            <strong>⚠️ Important Note:</strong> Once your account is deleted, this action cannot be undone. All your data will be permanently removed and cannot be recovered. Make sure to withdraw any remaining wallet balance before requesting deletion.
         </div>
 
         <footer>
             <p><span class="app-name">BetProf</span> by Askraph</p>
             <p>Last updated: December 2024</p>
+            <p style="margin-top: 10px;">Need help? Contact us at <a href="mailto:support@betprof.com" style="color: #667eea;">support@betprof.com</a></p>
         </footer>
     </div>
+
+    <script>
+        document.getElementById('deletionForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            const submitBtn = document.getElementById('submitBtn');
+            const successMessage = document.getElementById('successMessage');
+            const errorMessage = document.getElementById('errorMessage');
+            
+            // Get form data
+            const email = document.getElementById('email').value;
+            const username = document.getElementById('username').value;
+            const reason = document.getElementById('reason').value;
+            
+            // Disable button
+            submitBtn.disabled = true;
+            submitBtn.textContent = 'Submitting...';
+            
+            // Create mailto link with all information
+            const subject = encodeURIComponent('BetProf Account Deletion Request');
+            const body = encodeURIComponent(
+                `ACCOUNT DELETION REQUEST\n\n` +
+                `Email: ${email}\n` +
+                `Username/Phone: ${username || 'Not provided'}\n` +
+                `Reason: ${reason || 'Not provided'}\n\n` +
+                `Date: ${new Date().toLocaleString()}\n\n` +
+                `Please delete my account and all associated data as per your privacy policy.`
+            );
+            
+            const mailtoLink = `mailto:support@betprof.com?subject=${subject}&body=${body}`;
+            
+            // Open email client
+            window.location.href = mailtoLink;
+            
+            // Show success message after a short delay
+            setTimeout(() => {
+                successMessage.classList.add('show');
+                submitBtn.disabled = false;
+                submitBtn.textContent = 'Submit Another Request';
+                
+                // Reset form
+                document.getElementById('deletionForm').reset();
+            }, 1000);
+        });
+    </script>
 </body>
 </html>
-```
