@@ -1,1 +1,226 @@
 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BetProf - Privacy Policy</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+            background: #f5f5f5;
+            padding: 20px;
+            line-height: 1.6;
+            color: #333;
+        }
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            background: white;
+            padding: 40px;
+            border-radius: 10px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        h1 {
+            color: #667eea;
+            margin-bottom: 10px;
+            font-size: 2.5em;
+        }
+        h2 {
+            color: #667eea;
+            margin-top: 30px;
+            margin-bottom: 15px;
+            font-size: 1.5em;
+        }
+        h3 {
+            color: #555;
+            margin-top: 20px;
+            margin-bottom: 10px;
+            font-size: 1.2em;
+        }
+        p {
+            margin-bottom: 15px;
+        }
+        ul, ol {
+            margin-left: 30px;
+            margin-bottom: 15px;
+        }
+        li {
+            margin-bottom: 8px;
+        }
+        .last-updated {
+            color: #999;
+            font-style: italic;
+            margin-bottom: 30px;
+        }
+        .important {
+            background: #fff3cd;
+            border-left: 4px solid #ffc107;
+            padding: 15px;
+            margin: 20px 0;
+        }
+        a {
+            color: #667eea;
+            text-decoration: none;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
+        .contact {
+            background: #f8f9fa;
+            padding: 20px;
+            border-radius: 8px;
+            margin-top: 30px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Privacy Policy</h1>
+        <p class="last-updated">Last Updated: December 23, 2024</p>
+
+        <p>BetProf ("we", "our", or "us") is committed to protecting your privacy. This Privacy Policy explains how we collect, use, disclose, and safeguard your information when you use our mobile application.</p>
+
+        <h2>1. Information We Collect</h2>
+
+        <h3>1.1 Personal Information</h3>
+        <p>We collect information that you provide directly to us, including:</p>
+        <ul>
+            <li>Name and username</li>
+            <li>Email address</li>
+            <li>Phone number</li>
+            <li>Profile picture (optional)</li>
+            <li>Payment information (processed securely through Flutterwave)</li>
+            <li>Betting preferences and history</li>
+        </ul>
+
+        <h3>1.2 Automatically Collected Information</h3>
+        <p>When you use BetProf, we automatically collect certain information, including:</p>
+        <ul>
+            <li>Device information (model, operating system, unique device identifiers)</li>
+            <li>IP address and location data</li>
+            <li>App usage data and analytics</li>
+            <li>Log data (access times, pages viewed, app crashes)</li>
+            <li>Cookies and similar tracking technologies</li>
+        </ul>
+
+        <h3>1.3 Firebase Services</h3>
+        <p>We use Firebase services which may collect:</p>
+        <ul>
+            <li>Analytics data about app usage</li>
+            <li>Crash reports and performance data</li>
+            <li>Authentication information</li>
+            <li>Push notification tokens</li>
+        </ul>
+
+        <h2>2. How We Use Your Information</h2>
+        <p>We use the collected information for:</p>
+        <ul>
+            <li>Providing and maintaining the BetProf service</li>
+            <li>Processing your subscription payments</li>
+            <li>Sending you predictions, tips, and updates</li>
+            <li>Personalizing your experience</li>
+            <li>Analyzing app usage to improve our services</li>
+            <li>Communicating with you about updates, promotions, and customer support</li>
+            <li>Detecting and preventing fraud or abuse</li>
+            <li>Complying with legal obligations</li>
+        </ul>
+
+        <h2>3. Information Sharing and Disclosure</h2>
+
+        <h3>3.1 Third-Party Service Providers</h3>
+        <p>We share information with trusted third-party service providers who assist us in operating our app:</p>
+        <ul>
+            <li><strong>Flutterwave:</strong> Payment processing (subject to their privacy policy)</li>
+            <li><strong>Firebase/Google:</strong> Analytics, authentication, and cloud services</li>
+            <li><strong>Cloud hosting providers:</strong> Data storage and app infrastructure</li>
+        </ul>
+
+        <h3>3.2 Legal Requirements</h3>
+        <p>We may disclose your information if required by law or in response to:</p>
+        <ul>
+            <li>Court orders or legal processes</li>
+            <li>Government or regulatory requests</li>
+            <li>Protection of our rights, property, or safety</li>
+            <li>Investigation of fraud or security issues</li>
+        </ul>
+
+        <h3>3.3 Business Transfers</h3>
+        <p>In the event of a merger, acquisition, or sale of assets, your information may be transferred to the acquiring entity.</p>
+
+        <h2>4. Data Security</h2>
+        <p>We implement industry-standard security measures to protect your information:</p>
+        <ul>
+            <li>Encryption of data in transit and at rest</li>
+            <li>Secure authentication protocols</li>
+            <li>Regular security audits and updates</li>
+            <li>Access controls and monitoring</li>
+        </ul>
+        <p>However, no method of transmission over the internet is 100% secure. We cannot guarantee absolute security of your data.</p>
+
+        <h2>5. Data Retention</h2>
+        <p>We retain your personal information for as long as necessary to:</p>
+        <ul>
+            <li>Provide our services to you</li>
+            <li>Comply with legal obligations</li>
+            <li>Resolve disputes and enforce our agreements</li>
+        </ul>
+        <p>Upon account deletion, we will delete or anonymize your data within 30 days, except for information we are required to retain by law.</p>
+
+        <h2>6. Your Rights and Choices</h2>
+        <p>You have the following rights regarding your personal information:</p>
+        <ul>
+            <li><strong>Access:</strong> Request a copy of your personal data</li>
+            <li><strong>Correction:</strong> Update or correct inaccurate information</li>
+            <li><strong>Deletion:</strong> Request deletion of your account and data</li>
+            <li><strong>Opt-out:</strong> Unsubscribe from marketing communications</li>
+            <li><strong>Data Portability:</strong> Request your data in a portable format</li>
+        </ul>
+        <p>To exercise these rights, contact us at <a href="mailto:betprof247#gmail.com">betprof247#gmail.com</a> or use the in-app account deletion feature.</p>
+
+        <h2>7. Children's Privacy</h2>
+        <p><strong>BetProf is not intended for users under 18 years of age.</strong> We do not knowingly collect information from children. If you believe we have collected information from a minor, please contact us immediately.</p>
+
+        <h2>8. International Data Transfers</h2>
+        <p>Your information may be transferred to and processed in countries other than your country of residence. We ensure appropriate safeguards are in place to protect your data in accordance with this Privacy Policy.</p>
+
+        <h2>9. Cookies and Tracking Technologies</h2>
+        <p>We use cookies and similar technologies to:</p>
+        <ul>
+            <li>Remember your preferences and settings</li>
+            <li>Analyze app usage and performance</li>
+            <li>Provide personalized content and recommendations</li>
+        </ul>
+        <p>You can manage cookie preferences through your device settings.</p>
+
+        <h2>10. Third-Party Links</h2>
+        <p>Our app may contain links to third-party websites or services. We are not responsible for the privacy practices of these third parties. We encourage you to review their privacy policies.</p>
+
+        <h2>11. Changes to This Privacy Policy</h2>
+        <p>We may update this Privacy Policy from time to time. We will notify you of significant changes through:</p>
+        <ul>
+            <li>In-app notifications</li>
+            <li>Email communications</li>
+            <li>Updated "Last Updated" date at the top of this policy</li>
+        </ul>
+        <p>Your continued use of BetProf after changes constitutes acceptance of the updated policy.</p>
+
+        <h2>12. Contact Us</h2>
+        <div class="contact">
+            <p>If you have questions or concerns about this Privacy Policy or our data practices, please contact us:</p>
+            <p><strong>Email:</strong> <a href="mailto:betprof247#gmail.com">betprof247#gmail.com</a></p>
+            <p><strong>Support:</strong> <a href="mailto:betprof247#gmail.com">betprof247#gmail.com</a></p>
+            <p><strong>App:</strong> BetProf by Askraph</p>
+        </div>
+
+        <div class="important">
+            <strong>Important:</strong> By using BetProf, you acknowledge that you have read and understood this Privacy Policy and agree to the collection, use, and disclosure of your information as described herein.
+        </div>
+    </div>
+</body>
+</html>
